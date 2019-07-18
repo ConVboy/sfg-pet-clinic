@@ -9,11 +9,10 @@ public interface VetService {
 
     Vet findByID(Long id);
 
-    Vet findByLastName(String lastName);
-
     Vet save(Vet vet);
 
     Set<Vet> findAll();
+
 }
 
 
