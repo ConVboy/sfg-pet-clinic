@@ -41,7 +41,7 @@ public class VetMapService extends AbstractMapService<Vet, Long> implements VetS
             }
             });
         }
-        return super.save( obj);
+        return super.save(obj);
     }
 
     @Override
