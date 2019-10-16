@@ -1,0 +1,7 @@
+package convboy.springframework.sfgpetclinic.repositories;
+
+import convboy.springframework.sfgpetclinic.model.Specialty;
+import org.springframework.data.repository.CrudRepository;
+
+public interface SpecialtyRepository extends CrudRepository<Specialty, Long> {
+}
