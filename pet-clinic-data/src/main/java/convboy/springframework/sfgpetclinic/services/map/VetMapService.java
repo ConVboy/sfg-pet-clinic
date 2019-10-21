@@ -4,11 +4,13 @@ import convboy.springframework.sfgpetclinic.model.Specialty;
 import convboy.springframework.sfgpetclinic.model.Vet;
 import convboy.springframework.sfgpetclinic.services.SpecialtyService;
 import convboy.springframework.sfgpetclinic.services.VetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default","map"})
 public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
 
     private SpecialtyService specialtyService;
@@ -34,8 +36,8 @@ public class VetMapService extends AbstractMapService<Vet, Long> implements VetS
     @Override
     public Vet save(Vet obj) {
 
-        if(obj.getSpecialites().size() > 0){
-            obj.getSpecialites().forEach(specialty -> {if(specialty.getId()== null){
+        if(obj.getSpecialties().size() > 0){
+            obj.getSpecialties().forEach(specialty -> {if(specialty.getId()== null){
            Specialty savedSpecialty = specialtyService.save(specialty);
            specialty.setId(savedSpecialty.getId());
             }

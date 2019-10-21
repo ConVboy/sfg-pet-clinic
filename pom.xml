@@ -25,7 +25,9 @@
         <developerConnection>scm:git:https://github.com/ConVboy/sfg-pet-clinic.git</developerConnection>
       <tag>HEAD</tag>
   </scm>
+<dependencies>
 
+</dependencies>
     <build>
         <plugins>
             <plugin>
